@@ -1,0 +1,632 @@
+:root {
+    --primary-color: #0d6efd;
+    --dark-bg: #111827;
+    --light-text: #f1f5f9;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /* background-color: var(--dark-bg); */
+    color: var(--light-text);
+}
+
+
+/* Menu Links */
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color:white !important;
+}
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight active link */
+.navbar .nav-link.active {
+  color: #0d6efd !important;
+  font-weight: 600;
+}
+
+/* Optional: Better spacing on smaller screens */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    text-align: center;
+  }
+}
+
+.nav-link {
+    color: black !important;
+}
+
+/* Menulink Hover  */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #f1f5f9;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #282936;
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #282936;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+/* Navbar base */
+.navbar {
+  background-color: #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand img {
+  max-height: 40px;
+}
+
+/* Nav link style */
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+/* Active link */
+.navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Underline on hover */
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #0d6efd;
+  width: 0;
+  transition: width 0.3s;
+  margin-top: 2px;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Logo Image */
+.logo-img {
+  max-height: 40px;
+  height: auto;
+  width: auto;
+}
+
+/* Toggler Icon - Force Black for Visibility */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Optional: Toggler border */
+.navbar-toggler {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure alignment on mobile */
+@media (max-width: 576px) {
+  .navbar-brand {
+    margin-right: auto;
+  }
+  .logo-img {
+    max-height: 35px;
+  }
+}
+
+/* Make navbar-toggler-icon black */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Optional: Add border to toggler button for visibility */
+.navbar-toggler {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* hero section  */
+  .carousel-inner {
+    height: 550px; /* Adjust as needed */
+  }
+
+  .carousel-item {
+    position: relative;
+  }
+
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Dark transparent overlay */
+  .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 0.5 = 50% opacity */
+    z-index: 1;
+  }
+
+  /* Caption styling */
+  .carousel-caption-custom {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+  }
+
+  .carousel-caption-custom h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+
+  .carousel-caption-custom .btn {
+    margin: 0 10px;
+    padding: 10px 25px;
+  }
+/* About Section Enhancements */
+.mb-5 {
+    margin-bottom: 1rem !important;
+    color: black !important;
+    text-align: justify;
+}
+.mb-3 {
+    margin-bottom: 1rem !important;
+    color:#0000007d !important;
+    text-align: justify;
+}
+.text-muted{
+  margin-bottom: 1rem !important;
+  color: black !important;
+}
+
+
+
+/* four pillers  */
+/* Glassmorphism card effect with glow */
+.card.h-100 {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(17px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) ,
+              0 0 12px rgba(13, 110, 253, 0.1) !important; /* subtle blue glow */
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect with stronger glow */
+.card.h-100:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
+              0 0 20px rgba(13, 110, 253, 0.3) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Icon image smooth animation */
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Smooth text appearance */
+.card h5,
+.card p {
+  transition: color 0.3s ease;
+}
+
+.card:hover h5 {
+  color: #0d6efd; /* Bootstrap primary */
+}
+
+.card:hover p {
+  color: #333;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+    color: black;
+}
+/* Four Pillars Section – Responsive Enhancements */
+@media (max-width: 576px) {
+  .card-body img {
+    height: 40px !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem !important;
+  }
+}
+
+
+ /* Elementer section */
+/* Elementer Section Responsive Styles */
+
+/* Smooth box shadow and style for the stat boxes */
+#Service .shadow {
+  background-color: #fff; /* white background */
+  border-radius: 12px 24px 6px 18px !important;
+ /* rounded corners */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important; /* smooth, soft shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* smooth animation */
+  cursor: default;
+  /* padding is handled by your p-4 class */
+}
+
+#Service .shadow:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18) !important; /* deeper shadow on hover */
+  transform: translateY(-5px) !important; /* subtle lift on hover */
+}
+
+/* Optional: text style for counter numbers */
+#Service .counter {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Make sure the boxes fill height */
+#Service .h-100 {
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .display-5 {
+    font-size: 1.8rem !important;
+  }
+
+  .text-muted {
+    font-size: 0.85rem;
+  }
+
+  .p-4 {
+    padding: 1rem !important;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .display-5 {
+    font-size: 2rem !important;
+  }
+
+  .text-muted {
+    font-size: 0.9rem;
+  }
+
+  .p-4 {
+    padding: 1.25rem !important;
+  }
+}
+
+
+
+/* Tablet View */
+@media (min-width: 577px) and (max-width: 768px) {
+  .card-body img {
+    height: 50px !important;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ensure cards look uniform on all devices */
+.card.h-100 {
+  transition: transform 0.3s ease;
+}
+.card.h-100:hover {
+  transform: translateY(-5px);
+}
+
+  #counter {
+    color: red;
+  }
+
+
+
+
+
+
+/* Mobile (<=576px) */
+@media (max-width: 576px) {
+  .carousel-inner {
+    height: 300px;
+  }
+
+  .carousel-caption-custom h2 {
+    font-size: 1.3rem;
+  }
+
+  .carousel-caption-custom .btn {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    margin: 5px;
+  }
+
+  .about-section img {
+    margin-bottom: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+  }
+
+  .text-md-start {
+    text-align: center !important;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+}
+
+/* Tablet (577px–768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .carousel-inner {
+    height: 400px;
+  }
+
+  .carousel-caption-custom h2 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption-custom .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Laptop (769px–992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .carousel-inner {
+    height: 450px;
+  }
+
+  .carousel-caption-custom h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption-custom .btn {
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Medium & Large Screens (>=993px) */
+@media (min-width: 993px) {
+  .carousel-inner {
+    height: 550px;
+  }
+
+  .carousel-caption-custom h2 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-caption-custom .btn {
+    font-size: 1.1rem;
+  }
+}
+
+/* icon css  */
+/* Footer Styles */
+footer {
+  background-color: #000000 !important; /* Deep dark background */
+  color: #ffffff !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer_0{
+    --bs-bg-opacity: 1;
+    background-color: rgb(12, 12, 12) !important;
+}
+.footer_span{
+  --bs-bg-opacity: 1;
+   color: rgb(247, 244, 244) !important;
+   font-size: medium !important;
+
+} 
+footer h5, footer h6 {
+  color: #ffffff;
+}
+
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+footer .bi {
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+footer .bi:hover {
+  color: #00aced;
+}
+
+footer .text-muted {
+  color: #b0b0b0 !important;
+}
+
+footer .border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+@media (max-width: 768px) {
+  footer .row > div {
+    text-align: center;
+  }
+
+  footer .mt-3 {
+    justify-content: center;
+  }
+
+  footer .mt-3 a {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
